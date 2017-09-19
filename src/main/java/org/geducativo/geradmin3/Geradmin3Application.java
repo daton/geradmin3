@@ -27,7 +27,7 @@ public class Geradmin3Application implements CommandLineRunner {
 String mensaje="saas";
 int filas=0;
 		try {
-  //for(int i=1;i<=22;i++) {
+  //for(int i=1;i<=22;i++) {   asasasa
 	 // reposositorioClaveProfesor.save(new ClaveProfesor("BINF200" +i));
   //}
 			//repositorioProfesor.save(p);
