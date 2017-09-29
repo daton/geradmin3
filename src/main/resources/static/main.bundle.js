@@ -515,7 +515,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/inicio/inicio.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"login-wrapper\">\n    <div class=\"login\">\n        <label class=\"title\">\n            <h3 class=\"welcome\">Benvenido a</h3>\n            <img src=\"assets/logochico.jpg\">\n        </label>\n        <div class=\"login-group\">\n            <div class=\"auth-source select\">\n                <select id=\"login-auth-source-1\">\n                    <option>Profesor</option>\n                    <option>Alumno</option>\n                </select>\n            </div>\n            <input class=\"username\" [(ngModel)]=\"login\" id=\"login_username\" placeholder=\"Correo electrónico\">\n            <input type=\"password\" class=\"password\" [(ngModel)]=\"password\" id=\"login_password\" placeholder=\"Contraseña\">\n            <!-- <div class=\"checkbox\">\n                <input type=\"checkbox\" id=\"rememberme\">\n               <label for=\"rememberme\">\n                    Remember me\n                </label>\n            </div>\n              -->\n            <div [hidden]=\"estaOculta\" class=\"error active\">\n                Usuario o contraseña inválidos\n            </div>\n            \n            <button (click)=\"autenticar()\" class=\"btn btn-primary\">Ingresar</button>\n           <!-- <a href=\"javascript://\" class=\"signup\">Sign up for a Company ID</a>-->\n\n         <h5>¿No tienes una cuenta? Regístrate </h5>\n       \n        <button (click)=\"registrarProfesor()\" class=\"btn btn-warning\"> Registro Maestro</button>\n        <button (click)=\"registrarAlumno()\" class=\"btn btn-danger\">Registro Alumno</button>\n       \n        </div>\n    </div>\n</div>"
+module.exports = "\n<div class=\"login-wrapper\">\n    <div class=\"login\">\n        <label class=\"title\">\n            <h3 class=\"welcome\">Benvenido a</h3>\n            <img src=\"assets/logochico.jpg\">\n        </label>\n        <div class=\"login-group\">\n            <div class=\"auth-source select\">\n                <select id=\"login-auth-source-1\">\n                    <option>Profesor</option>\n                    <option>Alumno</option>\n                </select>\n            </div>\n            <input class=\"username\" [(ngModel)]=\"login\" id=\"login_username\" placeholder=\"Correo electrónico\">\n            <input type=\"password\" class=\"password\" [(ngModel)]=\"password\" id=\"login_password\" placeholder=\"Contraseña\">\n            <!-- <div class=\"checkbox\">\n                <input type=\"checkbox\" id=\"rememberme\">\n               <label for=\"rememberme\">\n                    Remember me\n                </label>\n            </div>\n              -->\n                  <button (click)=\"autenticar()\" class=\"btn btn-primary\">Ingresar</button>\n            <div [hidden]=\"estaOculta\">\n              <div class=\"error active\">\n                Usuario o contraseña inválidos, si no la recuerdas proporciona tu correo para enviartela y\n                oprimer el boton \"Recuperar Contraseña\"\n              </div>\n              <div class=\"login-group\">\n                <input type=\"text-help\" [(ngModel)]=\"email\" id=\"email\" placeholder=\"Introduce tu Correo\">\n                <button click=\"recuperarContrasena()\" class=\"btn btn-outline-warning\">Recuperar Contraseña</button>\n              </div>\n            </div>\n\n\n           <!-- <a href=\"javascript://\" class=\"signup\">Sign up for a Company ID</a>-->\n\n         <h5>¿No tienes una cuenta? Regístrate </h5>\n\n        <button (click)=\"registrarProfesor()\" class=\"btn btn-warning\"> Registro Maestro</button>\n        <button (click)=\"registrarAlumno()\" class=\"btn btn-danger\">Registro Alumno</button>\n\n        </div>\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -862,7 +862,7 @@ var RegistroalumnoComponent = (function () {
         this.oculta = true;
     }
     // have to define doCancel because page will prevent doCancel from working
-    // if the page had a previous button, you would need to call 
+    // if the page had a previous button, you would need to call
     // this.wizard.previous() manually as well...
     RegistroalumnoComponent.prototype.doCancel = function () {
         this.wizardLarge.close();
@@ -918,6 +918,9 @@ var RegistroalumnoComponent = (function () {
     RegistroalumnoComponent.prototype.estaInvalidada = function () {
         this.oculta = this.estatus.success;
         return !this.estatus.success;
+    };
+    RegistroalumnoComponent.prototype.recupararContrasena = function () {
+        console.log("Contraseña recuperada");
     };
     return RegistroalumnoComponent;
 }());
