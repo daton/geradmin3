@@ -32,7 +32,15 @@ Plantel plantel;
     String email;
     String password;
 
+    String celular;
 
+    public String getCelular() {
+        return celular;
+    }
+
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }
 
     char registrado;
 
