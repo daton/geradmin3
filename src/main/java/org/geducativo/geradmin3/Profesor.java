@@ -17,7 +17,7 @@ public class Profesor {
     String paterno;
     String materno;
 
-Plantel plantel;
+    Plantel plantel;
 
     public Plantel getPlantel() {
         return plantel;
@@ -30,7 +30,7 @@ Plantel plantel;
     String turno;
 
     String email;
-    String password;
+    String password;                                                                                              
 
     String celular;
 

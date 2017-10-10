@@ -2,10 +2,7 @@ package org.geducativo.geradmin3;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin
@@ -18,5 +15,13 @@ public class ControladorProfesor {
         System.out.println("SI LLEGO");
 
         return repositorioProfesor.findOne("BINF2001");
+    }
+
+    @RequestMapping(value="/profesor", method = RequestMethod.POST, headers = {"Accept=application/json"})
+    public Estatus registrarProfesor(@RequestBody String json){
+        System.out.println("si llego el profesor a registrar");
+        Estatus e=new Estatus();
+        e.setSuccess(true);
+        return e;
     }
 }
