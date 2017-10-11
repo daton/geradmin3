@@ -23,7 +23,7 @@ public class ControladorClaveProfesor {
         }
         else if(clave==null) {
             e.setSuccess(false);
-            e.setMensaje("Esa clave no existe");
+            e.setMensaje("La clave ingresada no existe");
         }else if(repositorioProfesor.findOne(numero).getRegistrado()=='s'){
             e.setSuccess(false);
             e.setMensaje("Esa clave ya se registró");

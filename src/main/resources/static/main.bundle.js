@@ -553,7 +553,7 @@ var InicioComponent = (function () {
         this.mensaje = 'nada';
     }
     InicioComponent.prototype.ngOnInit = function () {
-        this.obtenerProfesor();
+        //  this.obtenerProfesor();
     };
     InicioComponent.prototype.obtenerCorreo = function () {
         var _this = this;
