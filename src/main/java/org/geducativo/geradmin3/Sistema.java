@@ -1,15 +1,9 @@
 package org.geducativo.geradmin3;
 
-public class Materia {
-    String campo;
 
-    public String getCampo() {
-        return campo;
-    }
 
-    public void setCampo(String campo) {
-        this.campo = campo;
-    }
+
+public class Sistema {
 
     String nombre;
 
@@ -20,4 +14,6 @@ public class Materia {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+
 }

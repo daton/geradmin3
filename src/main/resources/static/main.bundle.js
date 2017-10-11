@@ -225,6 +225,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var ClaveService = (function () {
+    //  private direccionUrl= "http://localhost:9000/api/clave/"
     function ClaveService(http) {
         this.http = http;
         this.direccionUrl = "http://geradmin.herokuapp.com/api/clave/";
@@ -267,6 +268,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var ClaveprofesorService = (function () {
+    //    private direccionUrl= "http://localhost:9000/api/clave-profesor/"
     function ClaveprofesorService(http) {
         this.http = http;
         this.direccionUrl = "http://geradmin.herokuapp.com/api/clave-profesor/";
@@ -335,8 +337,9 @@ var _a;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Estatus; });
 var Estatus = (function () {
-    function Estatus(success) {
+    function Estatus(success, mensaje) {
         this.success = success;
+        this.mensaje = mensaje;
     }
     return Estatus;
 }());
@@ -412,7 +415,7 @@ var ExamenesComponent = (function () {
         this.oculta = true;
     }
     // have to define doCancel because page will prevent doCancel from working
-    // if the page had a previous button, you would need to call 
+    // if the page had a previous button, you would need to call
     // this.wizard.previous() manually as well...
     ExamenesComponent.prototype.doCancel = function () {
         this.wizardLarge.close();
@@ -436,7 +439,7 @@ var ExamenesComponent = (function () {
         }, 1000);
     };
     ExamenesComponent.prototype.ngOnInit = function () {
-        this.estatus = new __WEBPACK_IMPORTED_MODULE_4__estatus__["a" /* Estatus */](false);
+        this.estatus = new __WEBPACK_IMPORTED_MODULE_4__estatus__["a" /* Estatus */](false, "");
     };
     ExamenesComponent.prototype.obtenerClave = function () {
         this.getClave();
@@ -565,7 +568,7 @@ var InicioComponent = (function () {
     InicioComponent.prototype.registrarProfesor = function () {
         this.router.navigate(["/registro-profesor"], { skipLocationChange: true });
         this.estaOculta = true;
-        console.log('A ver que pasa' + this.profesor.clave);
+        //console.log('A ver que pasa'+this.profesor.clave);
     };
     InicioComponent.prototype.registrarAlumno = function () {
         this.router.navigate(["/registro-alumno"], { skipLocationChange: true });
@@ -601,7 +604,7 @@ var _a, _b, _c;
 
 /***/ }),
 
-/***/ "../../../../../src/app/principal/Materia.ts":
+/***/ "../../../../../src/app/materia.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -614,7 +617,7 @@ var Materia = (function () {
     return Materia;
 }());
 
-//# sourceMappingURL=Materia.js.map
+//# sourceMappingURL=materia.js.map
 
 /***/ }),
 
@@ -649,7 +652,7 @@ module.exports = "<div class=\"main-container\">\n  <div class=\"alert alert-app
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PrincipalComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Materia__ = __webpack_require__("../../../../../src/app/principal/Materia.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__materia__ = __webpack_require__("../../../../../src/app/materia.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -670,25 +673,25 @@ var PrincipalComponent = (function () {
         this.toAdd = [];
         this.toDelete = [];
         this._selected = [];
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__Materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 1'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__Materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 2'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__Materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 3'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__Materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 4'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__Materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 5'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__Materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 6'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__Materia__["a" /* Materia */]('Comunicación', 'Lenguaje y comunicación 1'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__Materia__["a" /* Materia */]('Comunicación', 'Lenguaje y comunicación 2'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__Materia__["a" /* Materia */]('Comunicación', 'Lenguaje y literatura 1'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__Materia__["a" /* Materia */]('Comunicación', 'Lenguaje y literatura 2'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__Materia__["a" /* Materia */]('Comunicación', 'Taller de análisis de los textos 1'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__Materia__["a" /* Materia */]('Comunicación', 'Taller de análisis de los textos 2'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__Materia__["a" /* Materia */]('Informática', 'Informática 1'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__Materia__["a" /* Materia */]('Informática', 'Informática 2'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__Materia__["a" /* Materia */]('Informática', 'Informática 3'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__Materia__["a" /* Materia */]('Informática', 'Informática 4'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__Materia__["a" /* Materia */]('Desarrollo Humano', 'Orientación educativa'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__Materia__["a" /* Materia */]('Desarrollo Humano', 'Orientación vocacional'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__Materia__["a" /* Materia */]('Desarrollo Humano', 'Actividades deportivas'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 1'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 2'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 3'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 4'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 5'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 6'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Comunicación', 'Lenguaje y comunicación 1'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Comunicación', 'Lenguaje y comunicación 2'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Comunicación', 'Lenguaje y literatura 1'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Comunicación', 'Lenguaje y literatura 2'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Comunicación', 'Taller de análisis de los textos 1'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Comunicación', 'Taller de análisis de los textos 2'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Informática', 'Informática 1'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Informática', 'Informática 2'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Informática', 'Informática 3'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Informática', 'Informática 4'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Desarrollo Humano', 'Orientación educativa'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Desarrollo Humano', 'Orientación vocacional'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Desarrollo Humano', 'Actividades deportivas'));
     }
     Object.defineProperty(PrincipalComponent.prototype, "selected", {
         get: function () {
@@ -777,11 +780,16 @@ var ProfesorService = (function () {
     function ProfesorService(http) {
         this.http = http;
         this.direccionUrl = 'https://geradmin.herokuapp.com/api/profesor';
+        //private direccionUrl= "http://localhost:9000/api/profesor"
         this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
     }
     ProfesorService.prototype.getProfesor = function () {
         return this.http.get(this.direccionUrl)
             .map(function (res) { return res.json(); });
+    };
+    ProfesorService.prototype.registrarProfesor = function (profesor) {
+        return this.http.post(this.direccionUrl, JSON.stringify(profesor), { headers: this.headers }).
+            map(function (respuesta) { return respuesta.json(); });
     };
     return ProfesorService;
 }());
@@ -886,7 +894,7 @@ var RegistroalumnoComponent = (function () {
         }, 1000);
     };
     RegistroalumnoComponent.prototype.ngOnInit = function () {
-        this.estatus = new __WEBPACK_IMPORTED_MODULE_4__estatus__["a" /* Estatus */](false);
+        this.estatus = new __WEBPACK_IMPORTED_MODULE_4__estatus__["a" /* Estatus */](false, "");
     };
     RegistroalumnoComponent.prototype.obtenerClave = function () {
         this.getClave();
@@ -968,7 +976,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/registroprofesor/registroprofesor.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<clr-wizard #wizardlg [(clrWizardOpen)]=\"lgOpen\" clrWizardSize=\"lg\" [clrWizardClosable]=\"false\">\n\n      <clr-wizard-title>Registro Profesor</clr-wizard-title>\n\n      <clr-wizard-button [type]=\"'cancel'\" (click)=\"navegarInicio()\">Cancelar</clr-wizard-button>\n      <clr-wizard-button [type]=\"'previous'\">Atrás</clr-wizard-button>\n      <clr-wizard-button [type]=\"'next'\" (click)=\"obtenerClaveProfesor()\"  >Siguiente</clr-wizard-button>\n      <clr-wizard-button [type]=\"'finish'\" (click)=\"navegarInicio()\">Finalizar</clr-wizard-button>\n\n\n\n      <clr-wizard-page\n      [clrWizardPageNextDisabled]=\"nombre.pristine || !myForm.valid\"\n          clrWizardPagePreventDefault=\"true\"\n      (clrWizardPageOnCommit)=\"onCommit()\"\n      (clrWizardPageOnCancel)=\"doCancel()\">\n          <ng-template clrPageTitle>Datos generales</ng-template>\n          <div class=\"spinner\" *ngIf=\"loadingFlag\">\n              Loading...\n          </div>\n          <clr-alert [clrAlertType]=\"'alert-info'\" [clrAlertClosable]=\"false\">\n                  <div class=\"alert-item\">\n                      Es importante que tengas a la mano tu clave de profesor\n                  </div>\n              </clr-alert>\n\n\n         <form #myForm=\"ngForm\" [class.hide]=\"loadingFlag\">\n              <section class=\"form-block\">\n\n                      <div class=\"form-group\">\n                              <label>Nombre</label>\n                              <label for=\"nombreInput\" aria-haspopup=\"true\" role=\"tooltip\"\n                              [class.invalid]=\"nombre.touched && !nombre.valid\"\n                              class=\"tooltip tooltip-validation tooltip-md tooltip-bottom-left\">\n                              <input type=\"text\" placeholder=\"Nombre\" id=\"nombreInput\" required  [(ngModel)]=\"modelo.nombre\" name=\"nombre\" #nombre=\"ngModel\"   size=\"35\">\n                              <span class=\"tooltip-content\">Este campo es obligatorio!</span>\n                              </label>\n                          </div>\n                          <div class=\"form-group\">\n                              <label>Apellido Paterno</label>\n                              <input type=\"text\" placeholder=\"Apellido Paterno\" [(ngModel)]=\"modelo.paterno\" name=\"paterno\" size=\"35\">\n                          </div>\n                          <div  class=\"form-group\">\n                                  <label>Apellido Materno</label>\n                              <input type=\"text\"   placeholder=\"Apellido Materno\"  [(ngModel)]=\"modelo.materno\" name=\"materno\" size=\"35\">\n                          </div>\n\n\n                              <clr-alert *ngIf=\"errorFlag\" [clrAlertType]=\"'alert-danger'\">\n                                  <div class=\"alert-item\">\n                                      Clave de profesor no válida!!\n                                  </div>\n                              </clr-alert>\n\n                  <div class=\"form-group\">\n\n                          <label for=\"mi-clave\">Clave del profesor</label>\n\n                          <input id=\"mi-clave\"  [(ngModel)]=\"miClave\" name=\"miClave\"  type=\"text\" placeholder=\"Clave del profesor\" size=\"35\" >\n\n                      </div>\n\n\n\n\n\n          </section>\n\n   </form>\n      </clr-wizard-page>\n\n      <clr-wizard-page>\n          <ng-template clrPageTitle>Perfil</ng-template>\n          <form>\n\n          <section class=\"form-block\">\n\n            <div class=\"form-group\">\n              <label for=\"\">Celular</label>\n                <input type=\"text\"   placeholder=\"Número de celular\"  [(ngModel)]=\"modelo.celular\" name=\"celular\" size=\"35\">\n            </div>\n\n          <div class=\"form-group\">\n              <label>Selecciona el turno</label>\n              <div class=\"auth-source select\">\n                  <select id=\"turno\" name=\"turno\"  [(ngModel)]=\"turno\" name=\"miTurno\">\n                  <option>Matutino</option>\n                      <option>Vespertino</option>\n                      <option>Mixto</option>\n              </select>\n              </div>\n          </div>\n          <div class=\"form-group\">\n              <label>Sistema al que perteneces</label>\n              <div class=\"auth-source select\">\n                  <select id=\"sistema\" name=\"sistema\"  [(ngModel)]=\"sistema\" name=\"sistema\">\n                  <option>BACHILLERES</option>\n                  <option>CONALEP</option>\n                  <option>CETIS</option>\n                  <option>CBETIS</option>\n                  <option>CECYT</option>\n                  <option>COBAEM</option>\n                  <option>UNAM</option>\n              </select>\n              </div>\n          </div>\n         <!-- termina form-group del perfim de las materias -->\n          </section>\n          </form>\n\n\n               <!-- Empieza perfil de las materias -->\n          <div class=\"form-group\">\n            <label for=\"selects_1\">Sistema al que pertences</label>\n            <div class=\"select\">\n                <select id=\"selects_1\">\n                    <option>BACHILLERES</option>\n                    <option>CONALEP</option>\n                    <option>CETIS</option>\n                    <option>CBETIS</option>\n                    <option>CECYT</option>\n                    <option>COBAEM</option>\n                    <option>UNAM</option>\n                </select>\n            </div>\n            <br>\n            <label>Selecciona los campos disciplinarios</label>\n            <clr-datagrid [(clrDgSelected)]=\"selected\">\n                <clr-dg-action-bar>\n                    <div class=\"btn-group btn-sm\" role=\"group\" aria-label=\"Available Actions\" *ngIf=\"selected.length > 0\">\n                    Materias seleccionadas: <span class=\"label label-info\" *ngFor=\"let materia of selected\">{{materia.nombre}}</span>\n\n                  <!--      <button type=\"button\" class=\"btn btn-secondary\" (click)=\"onAdd()\"><clr-icon shape=\"plus\"></clr-icon>Agregar a mis materias</button>-->\n                    <!--    <button type=\"button\" class=\"btn btn-secondary\" (click)=\"onDelete()\" ><clr-icon shape=\"close\"></clr-icon> Delete</button> -->\n                    <!--     <button type=\"button\" class=\"btn btn-secondary\" (click)=\"onEdit()\" *ngIf=\"selected.length == 1\"><clr-icon shape=\"pencil\"></clr-icon> Edit</button> -->\n                    </div>\n                </clr-dg-action-bar>\n                <clr-dg-column>Campo Disciplinario</clr-dg-column>\n                <clr-dg-column>Nombre de la materia</clr-dg-column>\n\n\n                <clr-dg-row *clrDgItems=\"let materia of materias\" [clrDgItem]=\"materia\">\n\n                    <clr-dg-cell>{{materia.campo}}</clr-dg-cell>\n                    <clr-dg-cell>{{materia.nombre}}</clr-dg-cell>\n\n                </clr-dg-row>\n                <clr-dg-footer>\n                    {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}}\n                    de {{pagination.totalItems}} materias\n                    <clr-dg-pagination #pagination [clrDgPageSize]=\"5\"></clr-dg-pagination>\n                </clr-dg-footer>\n\n            </clr-datagrid>\n            <br><br>\n\n\n        </div>\n\n      </clr-wizard-page>\n\n      <clr-wizard-page\n        [clrWizardPageNextDisabled]=\"miPas.pristine || !myFormContrasena.valid\"\n          clrWizardPagePreventDefault=\"true\"\n  (clrWizardPageOnCommit)=\"onCommitContrasena()\"\n  (clrWizardPagePrevious)=\"regresar()\"\n  (clrWizardPageOnCancel)=\"doCancelContrasena()\">\n          <ng-template clrPageTitle>Autenticación</ng-template>\n          <div class=\"spinner\" *ngIf=\"cargandoFlagContrasena\">\n              Loading...\n          </div>\n          <clr-alert [clrAlertType]=\"'alert-info'\" [clrAlertClosable]=\"false\">\n                  <div class=\"alert-item\">\n                      La contraseña debe contener un mínimo de 8 caracteres y un máximo de 12, debe contener números y letras, y es\n                  sensible a las mayúsculas.\n                  </div>\n              </clr-alert>\n          <form class=\"login\"   #myFormContrasena=\"ngForm\" [class.hide]=\"cargandoFlagContrasena\">\n              <section class=\"form-block\">\n\n                      <div class=\"form-group\">\n\n                              <label>Correo electrónico</label>\n\n                              <input  [(ngModel)]=\"miCorreo\" name=\"miCorreo\" id=\"validInput2\" type=\"email\" placeholder=\"Correo electronico\" size=\"35\" >\n\n                          </div>\n\n\n                  <div class=\"form-group\">\n                      <label>Contraseña</label>\n\n                      <label for=\"miPasswordInput\" aria-haspopup=\"true\" role=\"tooltip\"\n                      [class.invalid]=\"miPas.touched && !miPas.valid\"\n                      class=\"tooltip tooltip-validation tooltip-md tooltip-bottom-left\">\n                      <input type=\"password\" placeholder=\"Contraseña\" id=\"miPasInput\" required  [(ngModel)]=\"miPassword\" name=\"miPassword\" #miPas=\"ngModel\"   size=\"35\">\n                      <span class=\"tooltip-content\">El password es requerido!</span>\n                      </label>\n                  </div>\n                  <div class=\"form-group\">\n                    <label>Repetir Contraseña</label>\n                    <input type=\"password\"  [(ngModel)]=\"miPassword2\" name=\"miPassword2\" placeholder=\"Introduce nuevamente el password\" size=\"35\">\n                  </div>\n                  <clr-alert *ngIf=\"errorFlagContrasena\" [clrAlertType]=\"'alert-danger'\">\n                      <div class=\"alert-item\">\n                        {{mensajeErrorContrasena}}\n                      </div>\n                  </clr-alert>\n\n\n              </section>\n\n       </form>\n      </clr-wizard-page>\n\n\n\n      <clr-wizard-page>\n          <ng-template clrPageTitle>Confirmación</ng-template>\n\n          Al Oprimir el botón  de \"finalizar\" se efectuará el registro\n\n\n      </clr-wizard-page>\n  </clr-wizard>\n"
+module.exports = "<clr-wizard #wizardlg [(clrWizardOpen)]=\"lgOpen\" clrWizardSize=\"lg\" [clrWizardClosable]=\"false\">\n\n      <clr-wizard-title>Registro Profesor</clr-wizard-title>\n\n      <clr-wizard-button [type]=\"'cancel'\" (click)=\"navegarInicio()\">Cancelar</clr-wizard-button>\n      <clr-wizard-button [type]=\"'previous'\">Atrás</clr-wizard-button>\n      <clr-wizard-button [type]=\"'next'\" (click)=\"obtenerClaveProfesor()\"  >Siguiente</clr-wizard-button>\n      <clr-wizard-button [type]=\"'finish'\" (click)=\"registrarProfesor()\">Finalizar</clr-wizard-button>\n\n\n\n      <clr-wizard-page\n      [clrWizardPageNextDisabled]=\"nombre.pristine || !myForm.valid\"\n          clrWizardPagePreventDefault=\"true\"\n      (clrWizardPageOnCommit)=\"onCommit()\"\n      (clrWizardPageOnCancel)=\"doCancel()\">\n          <ng-template clrPageTitle>Datos generales</ng-template>\n          <div class=\"spinner\" *ngIf=\"loadingFlag\">\n              Loading...\n          </div>\n          <clr-alert [clrAlertType]=\"'alert-info'\" [clrAlertClosable]=\"false\">\n                  <div class=\"alert-item\">\n                      Es importante que tengas a la mano tu clave de profesor\n                  </div>\n              </clr-alert>\n\n\n         <form #myForm=\"ngForm\" [class.hide]=\"loadingFlag\">\n              <section class=\"form-block\">\n\n                      <div class=\"form-group\">\n                              <label>Nombre</label>\n                              <label for=\"nombreInput\" aria-haspopup=\"true\" role=\"tooltip\"\n                              [class.invalid]=\"nombre.touched && !nombre.valid\"\n                              class=\"tooltip tooltip-validation tooltip-md tooltip-bottom-left\">\n                              <input type=\"text\" placeholder=\"Nombre\" id=\"nombreInput\" required  [(ngModel)]=\"modelo.nombre\" name=\"nombre\" #nombre=\"ngModel\"   size=\"35\">\n                              <span class=\"tooltip-content\">Este campo es obligatorio!</span>\n                              </label>\n                          </div>\n                          <div class=\"form-group\">\n                              <label>Apellido Paterno</label>\n                              <input type=\"text\" placeholder=\"Apellido Paterno\" [(ngModel)]=\"modelo.paterno\" name=\"paterno\" size=\"35\">\n                          </div>\n                          <div  class=\"form-group\">\n                                  <label>Apellido Materno</label>\n                              <input type=\"text\"   placeholder=\"Apellido Materno\"  [(ngModel)]=\"modelo.materno\" name=\"materno\" size=\"35\">\n                          </div>\n\n\n                              <clr-alert *ngIf=\"errorFlag\" [clrAlertType]=\"'alert-danger'\">\n                                  <div class=\"alert-item\">\n                                      {{estatus.mensaje}}\n                                  </div>\n                              </clr-alert>\n\n                  <div class=\"form-group\">\n\n                          <label for=\"mi-clave\">Clave del profesor</label>\n\n                          <input id=\"mi-clave\"  [(ngModel)]=\"modelo.clave\" name=\"modelo.clave\"  type=\"text\" placeholder=\"Clave del profesor\" size=\"35\" >\n\n                      </div>\n\n\n\n\n\n          </section>\n\n   </form>\n      </clr-wizard-page>\n\n      <clr-wizard-page>\n          <ng-template clrPageTitle>Perfil</ng-template>\n          <form>\n\n          <section class=\"form-block\">\n\n            <div class=\"form-group\">\n              <label for=\"\">Celular</label>\n                <input type=\"text\"   placeholder=\"Número de celular\"  [(ngModel)]=\"modelo.celular\" name=\"celular\" size=\"35\">\n            </div>\n\n          <div class=\"form-group\">\n              <label>Selecciona el turno</label>\n              <div class=\"auth-source select\">\n                  <select id=\"turno\" name=\"turno\"  [(ngModel)]=\"modelo.turno\" name=\"miTurno\">\n                  <option>Matutino</option>\n                      <option>Vespertino</option>\n                      <option>Mixto</option>\n              </select>\n              </div>\n          </div>\n          <div class=\"form-group\">\n              <label>Sistema al que perteneces</label>\n              <div class=\"auth-source select\">\n                  <select id=\"sistema\" name=\"sistema\"  [(ngModel)]=\"modelo.sistema.nombre\" name=\"sistema\">\n                  <option>BACHILLERES</option>\n                  <option>CONALEP</option>\n                  <option>CETIS</option>\n                  <option>CBETIS</option>\n                  <option>CECYT</option>\n                  <option>COBAEM</option>\n                  <option>UNAM</option>\n              </select>\n              </div>\n          </div>\n         <!-- termina form-group del perfim de las materias -->\n          </section>\n          </form>\n\n\n               <!-- Empieza perfil de las materias -->\n          <div class=\"form-group\">\n\n            <label>Selecciona los campos disciplinarios</label>\n            <clr-datagrid [(clrDgSelected)]=\"selected\">\n                <clr-dg-action-bar>\n                    <div class=\"btn-group btn-sm\" role=\"group\" aria-label=\"Available Actions\" *ngIf=\"selected.length > 0\">\n                    Materias seleccionadas: <span class=\"label label-info\" *ngFor=\"let materia of selected\">{{materia.nombre}}</span>\n\n                  <!--      <button type=\"button\" class=\"btn btn-secondary\" (click)=\"onAdd()\"><clr-icon shape=\"plus\"></clr-icon>Agregar a mis materias</button>-->\n                    <!--    <button type=\"button\" class=\"btn btn-secondary\" (click)=\"onDelete()\" ><clr-icon shape=\"close\"></clr-icon> Delete</button> -->\n                    <!--     <button type=\"button\" class=\"btn btn-secondary\" (click)=\"onEdit()\" *ngIf=\"selected.length == 1\"><clr-icon shape=\"pencil\"></clr-icon> Edit</button> -->\n                    </div>\n                </clr-dg-action-bar>\n                <clr-dg-column>Campo Disciplinario</clr-dg-column>\n                <clr-dg-column>Nombre de la materia</clr-dg-column>\n\n\n                <clr-dg-row *clrDgItems=\"let materia of materias\" [clrDgItem]=\"materia\">\n\n                    <clr-dg-cell>{{materia.campo}}</clr-dg-cell>\n                    <clr-dg-cell>{{materia.nombre}}</clr-dg-cell>\n\n                </clr-dg-row>\n                <clr-dg-footer>\n                    {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}}\n                    de {{pagination.totalItems}} materias\n                    <clr-dg-pagination #pagination [clrDgPageSize]=\"5\"></clr-dg-pagination>\n                </clr-dg-footer>\n\n            </clr-datagrid>\n            <br><br>\n\n\n        </div>\n\n      </clr-wizard-page>\n\n      <clr-wizard-page\n        [clrWizardPageNextDisabled]=\"miPas.pristine || !myFormContrasena.valid\"\n          clrWizardPagePreventDefault=\"true\"\n  (clrWizardPageOnCommit)=\"onCommitContrasena()\"\n  (clrWizardPagePrevious)=\"regresar()\"\n  (clrWizardPageOnCancel)=\"doCancelContrasena()\">\n          <ng-template clrPageTitle>Autenticación</ng-template>\n          <div class=\"spinner\" *ngIf=\"cargandoFlagContrasena\">\n              Loading...\n          </div>\n          <clr-alert [clrAlertType]=\"'alert-info'\" [clrAlertClosable]=\"false\">\n                  <div class=\"alert-item\">\n                      La contraseña debe contener un mínimo de 8 caracteres y un máximo de 12, debe contener números y letras, y es\n                  sensible a las mayúsculas.\n                  </div>\n              </clr-alert>\n          <form class=\"login\"   #myFormContrasena=\"ngForm\" [class.hide]=\"cargandoFlagContrasena\">\n              <section class=\"form-block\">\n\n                      <div class=\"form-group\">\n\n                              <label>Correo electrónico</label>\n\n                              <input  [(ngModel)]=\"modelo.email\" name=\"email\" id=\"validInput2\" type=\"email\" placeholder=\"Correo electronico\" size=\"35\" >\n\n                          </div>\n\n\n                  <div class=\"form-group\">\n                      <label>Contraseña</label>\n\n                      <label for=\"miPasswordInput\" aria-haspopup=\"true\" role=\"tooltip\"\n                      [class.invalid]=\"miPas.touched && !miPas.valid\"\n                      class=\"tooltip tooltip-validation tooltip-md tooltip-bottom-left\">\n                      <input type=\"password\" placeholder=\"Contraseña\" id=\"miPasInput\" required  [(ngModel)]=\"miPassword\" name=\"miPassword\" #miPas=\"ngModel\"   size=\"35\">\n                      <span class=\"tooltip-content\">El password es requerido!</span>\n                      </label>\n                  </div>\n                  <div class=\"form-group\">\n                    <label>Repetir Contraseña</label>\n                    <input type=\"password\"  [(ngModel)]=\"miPassword2\" name=\"miPassword2\" placeholder=\"Introduce nuevamente el password\" size=\"35\">\n                  </div>\n                  <clr-alert *ngIf=\"errorFlagContrasena\" [clrAlertType]=\"'alert-danger'\">\n                      <div class=\"alert-item\">\n                        {{mensajeErrorContrasena}}\n                      </div>\n                  </clr-alert>\n\n\n              </section>\n\n       </form>\n      </clr-wizard-page>\n\n\n\n      <clr-wizard-page>\n          <ng-template clrPageTitle>Confirmación</ng-template>\n          <form class=\"compact\">\n\n          <label>Al oprimir  Finalizar se guardarán los siguientes datos:</label>\n          <section class=\"form-block\">\n          <div class=\"form-group\">\n            <label>Nombre:</label>\n            <span>{{modelo.nombre}}</span>\n          </div>\n          <div class=\"form-group\">\n            <label>A. Paterno:</label>\n            <span>{{modelo.paterno}}</span>\n          </div>\n          <div class=\"form-group\">\n            <label>A. Materno:</label>\n            <span>{{modelo.materno}}</span>\n          </div>\n          <div class=\"form-group\">\n            <label>Clave:</label>\n            <span>{{modelo.clave}}</span>\n          </div>\n          <div class=\"form-group\">\n            <label>Celular:</label>\n            <span>{{modelo.celular}}</span>\n          </div>\n          <div class=\"form-group\">\n            <label>Turno:</label>\n            <span>{{modelo.turno}}</span>\n          </div>\n\n          <div class=\"form-group\">\n            <label>Sistema:</label>\n            <span>{{modelo.sistema.nombre}}</span>\n          </div>\n          <div class=\"form-group\">\n            <label>Materias:</label>\n            <span class=\"label label-info\" *ngFor=\"let materia of selected\">{{materia.nombre}}</span>\n          </div>\n          <div class=\"form-group\">\n            <label>E-mail:</label>\n            <span>{{modelo.email}}</span>\n          </div>\n          <div class=\"form-group\">\n            <label>Password:</label>\n            <span>{{modelo.password}}</span>\n          </div>\n        </section>\n      </form>\n\n\n\n\n      </clr-wizard-page>\n  </clr-wizard>\n"
 
 /***/ }),
 
@@ -982,7 +990,8 @@ module.exports = "<clr-wizard #wizardlg [(clrWizardOpen)]=\"lgOpen\" clrWizardSi
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__claveprofesor_service__ = __webpack_require__("../../../../../src/app/claveprofesor.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__estatus__ = __webpack_require__("../../../../../src/app/estatus.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__principal_Materia__ = __webpack_require__("../../../../../src/app/principal/Materia.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__materia__ = __webpack_require__("../../../../../src/app/materia.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__profesor_service__ = __webpack_require__("../../../../../src/app/profesor.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -998,10 +1007,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var RegistroprofesorComponent = (function () {
-    function RegistroprofesorComponent(router, servicioClave) {
+    function RegistroprofesorComponent(router, servicioClave, servicioProfesor) {
         this.router = router;
         this.servicioClave = servicioClave;
+        this.servicioProfesor = servicioProfesor;
         this.lgOpen = true;
         this.perfil = 'Alumno';
         this.noEsProfesor = true;
@@ -1010,38 +1021,58 @@ var RegistroprofesorComponent = (function () {
         this.errorFlag = false;
         this.cargandoFlagContrasena = false;
         this.errorFlagContrasena = false;
+        /*
+                modelo={
+                  nombre:'',
+                  paterno:'',
+                  materno:'',
+                  sistema:''
+                }
+        
+                */
+        this.sistema = {
+            nombre: ''
+        };
+        //  materias:Array<Materia>=[];
+        this.materias = [];
         this.modelo = {
             nombre: '',
+            clave: '',
+            celular: '',
             paterno: '',
+            password: '',
+            registrado: '',
+            email: '',
             materno: '',
-            sistema: ''
+            materias: [],
+            turno: '',
+            sistema: this.sistema
         };
         //Los siguientes atributos y metodos son  necesarios para las materias
-        this.materias = [];
         this.toAdd = [];
         this.toDelete = [];
         this._selected = [];
         this.oculta = true;
         //materias para el perfil
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__principal_Materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 1'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__principal_Materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 2'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__principal_Materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 3'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__principal_Materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 4'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__principal_Materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 5'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__principal_Materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 6'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__principal_Materia__["a" /* Materia */]('Comunicación', 'Lenguaje y comunicación 1'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__principal_Materia__["a" /* Materia */]('Comunicación', 'Lenguaje y comunicación 2'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__principal_Materia__["a" /* Materia */]('Comunicación', 'Lenguaje y literatura 1'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__principal_Materia__["a" /* Materia */]('Comunicación', 'Lenguaje y literatura 2'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__principal_Materia__["a" /* Materia */]('Comunicación', 'Taller de análisis de los textos 1'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__principal_Materia__["a" /* Materia */]('Comunicación', 'Taller de análisis de los textos 2'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__principal_Materia__["a" /* Materia */]('Informática', 'Informática 1'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__principal_Materia__["a" /* Materia */]('Informática', 'Informática 2'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__principal_Materia__["a" /* Materia */]('Informática', 'Informática 3'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__principal_Materia__["a" /* Materia */]('Informática', 'Informática 4'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__principal_Materia__["a" /* Materia */]('Desarrollo Humano', 'Orientación educativa'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__principal_Materia__["a" /* Materia */]('Desarrollo Humano', 'Orientación vocacional'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__principal_Materia__["a" /* Materia */]('Desarrollo Humano', 'Actividades deportivas'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 1'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 2'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 3'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 4'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 5'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 6'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__materia__["a" /* Materia */]('Comunicación', 'Lenguaje y comunicación 1'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__materia__["a" /* Materia */]('Comunicación', 'Lenguaje y comunicación 2'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__materia__["a" /* Materia */]('Comunicación', 'Lenguaje y literatura 1'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__materia__["a" /* Materia */]('Comunicación', 'Lenguaje y literatura 2'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__materia__["a" /* Materia */]('Comunicación', 'Taller de análisis de los textos 1'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__materia__["a" /* Materia */]('Comunicación', 'Taller de análisis de los textos 2'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__materia__["a" /* Materia */]('Informática', 'Informática 1'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__materia__["a" /* Materia */]('Informática', 'Informática 2'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__materia__["a" /* Materia */]('Informática', 'Informática 3'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__materia__["a" /* Materia */]('Informática', 'Informática 4'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__materia__["a" /* Materia */]('Desarrollo Humano', 'Orientación educativa'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__materia__["a" /* Materia */]('Desarrollo Humano', 'Orientación vocacional'));
+        this.materias.push(new __WEBPACK_IMPORTED_MODULE_5__materia__["a" /* Materia */]('Desarrollo Humano', 'Actividades deportivas'));
     }
     Object.defineProperty(RegistroprofesorComponent.prototype, "selected", {
         get: function () {
@@ -1049,6 +1080,8 @@ var RegistroprofesorComponent = (function () {
         },
         set: function (selection) {
             this._selected = selection;
+            // this.modelo.materias.push(new Materia('mate','mate'));
+            this.modelo.materias = selection;
             this.cleanUp();
         },
         enumerable: true,
@@ -1109,6 +1142,7 @@ var RegistroprofesorComponent = (function () {
             if (_this.miPassword == _this.miPassword2) {
                 _this.wizardLarge.forceNext();
                 console.log('Contraseña aceptada!');
+                _this.modelo.password = _this.miPassword;
             }
             else {
                 _this.errorFlagContrasena = true;
@@ -1128,6 +1162,7 @@ var RegistroprofesorComponent = (function () {
         setTimeout(function () {
             if (_this.estatus.success) {
                 _this.wizardLarge.forceNext();
+                //      this.modelo.clave=miClave;
                 console.log('Encontrado!!');
             }
             else {
@@ -1137,11 +1172,12 @@ var RegistroprofesorComponent = (function () {
         }, 1000);
     };
     RegistroprofesorComponent.prototype.ngOnInit = function () {
-        this.estatus = new __WEBPACK_IMPORTED_MODULE_4__estatus__["a" /* Estatus */](false);
+        this.estatus = new __WEBPACK_IMPORTED_MODULE_4__estatus__["a" /* Estatus */](false, "");
     };
+    //Aqui se transmite el mensaje del estatus del registro
     RegistroprofesorComponent.prototype.obtenerClaveProfesor = function () {
         this.getClaveProfesor();
-        console.log('Hola' + this.estatus.success);
+        console.log('Estatus ' + this.estatus.success + 'Mensaje ' + this.estatus.mensaje);
     };
     RegistroprofesorComponent.prototype.navegarInicio = function () {
         this.router.navigate(["/inicio"], { skipLocationChange: true });
@@ -1159,8 +1195,16 @@ var RegistroprofesorComponent = (function () {
     };
     RegistroprofesorComponent.prototype.getClaveProfesor = function () {
         var _this = this;
-        this.servicioClave.getClaveProfesor(this.miClave)
+        this.servicioClave.getClaveProfesor(this.modelo.clave)
             .subscribe(function (estatus) { return _this.estatus = estatus; });
+    };
+    RegistroprofesorComponent.prototype.registrarProfesor = function () {
+        var _this = this;
+        this.servicioProfesor.registrarProfesor(this.modelo)
+            .subscribe(function (estatus) { return _this.estatus = estatus; });
+        this.router.navigate(["/inicio"], { skipLocationChange: true });
+        console.log(this._selected);
+        // this.modelo.materias=this._selected;
     };
     RegistroprofesorComponent.prototype.hacerAlgo = function () {
         console.log('asasasas');
@@ -1193,12 +1237,12 @@ RegistroprofesorComponent = __decorate([
         selector: 'app-registroprofesor',
         template: __webpack_require__("../../../../../src/app/registroprofesor/registroprofesor.component.html"),
         styles: [__webpack_require__("../../../../../src/app/registroprofesor/registroprofesor.component.css")],
-        providers: [__WEBPACK_IMPORTED_MODULE_3__claveprofesor_service__["a" /* ClaveprofesorService */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_3__claveprofesor_service__["a" /* ClaveprofesorService */], __WEBPACK_IMPORTED_MODULE_6__profesor_service__["a" /* ProfesorService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__claveprofesor_service__["a" /* ClaveprofesorService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__claveprofesor_service__["a" /* ClaveprofesorService */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__claveprofesor_service__["a" /* ClaveprofesorService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__claveprofesor_service__["a" /* ClaveprofesorService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__profesor_service__["a" /* ProfesorService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__profesor_service__["a" /* ProfesorService */]) === "function" && _d || Object])
 ], RegistroprofesorComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=registroprofesor.component.js.map
 
 /***/ }),

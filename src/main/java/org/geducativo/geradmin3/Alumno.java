@@ -13,7 +13,7 @@ public class Alumno {
     String paterno;
     String materno;
 
-    Plantel plantel;
+    Sistema sistema;
     String turno;
 
     String email;
@@ -57,12 +57,12 @@ public class Alumno {
         this.materno = materno;
     }
 
-    public Plantel getPlantel() {
-        return plantel;
+    public Sistema getSistema() {
+        return sistema;
     }
 
-    public void setPlantel(Plantel plantel) {
-        this.plantel = plantel;
+    public void setSistema(Sistema sistema) {
+        this.sistema = sistema;
     }
 
     public String getTurno() {

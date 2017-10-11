@@ -31,7 +31,7 @@ int filas=0;
 	 // reposositorioClaveProfesor.save(new ClaveProfesor("BINF200" +i));
   //}
 			//repositorioProfesor.save(p);
-			//repositorioPlantel.save(plantel);
+			//repositorioPlantel.save(sistema);
 			System.out.println("Si se guardao");
 
 

@@ -1,6 +1,7 @@
 package org.geducativo.geradmin3;
 
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,8 +19,22 @@ public class ControladorProfesor {
     }
 
     @RequestMapping(value="/profesor", method = RequestMethod.POST, headers = {"Accept=application/json"})
-    public Estatus registrarProfesor(@RequestBody String json){
+    public Estatus registrarProfesor(@RequestBody String json)throws Exception{
         System.out.println("si llego el profesor a registrar");
+        System.out.println(json);
+        ObjectMapper maper=new ObjectMapper();
+       Profesor profesor=maper.readValue(json, Profesor.class);
+       if(profesor.getRegistrado()!='s'){
+           //Aqui registrar
+           profesor.setRegistrado('s');
+           System.out.println("Se va a llevar a cabo el registro!!");
+           //Registro, donde se actualiza el registro a 's'
+           repositorioProfesor.save(profesor);
+           System.out.println("Ya esta registrado");
+
+       }else{
+           System.out.println("NO se va a llevar a cabo el registro, ya esta registrado!!");
+       }
         Estatus e=new Estatus();
         e.setSuccess(true);
         return e;

@@ -17,14 +17,14 @@ public class Profesor {
     String paterno;
     String materno;
 
-    Plantel plantel;
+    Sistema sistema;
 
-    public Plantel getPlantel() {
-        return plantel;
+    public Sistema getSistema() {
+        return sistema;
     }
 
-    public void setPlantel(Plantel plantel) {
-        this.plantel = plantel;
+    public void setSistema(Sistema sistema) {
+        this.sistema = sistema;
     }
 
     String turno;
