@@ -1,15 +1,19 @@
-webpackJsonp([2],{
+webpackJsonp(["main"],{
 
-/***/ "../../../../../src lazy recursive":
+/***/ "../../../../../src/$$_lazy_route_resource lazy recursive":
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
-	return new Promise(function(resolve, reject) { reject(new Error("Cannot find module '" + req + "'.")); });
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
 }
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = "../../../../../src lazy recursive";
+webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
@@ -18,9 +22,9 @@ webpackEmptyAsyncContext.id = "../../../../../src lazy recursive";
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__inicio_inicio_component__ = __webpack_require__("../../../../../src/app/inicio/inicio.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__principal_inicio_inicio_component__ = __webpack_require__("../../../../../src/app/principal/inicio/inicio.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__examenes_examenes_component__ = __webpack_require__("../../../../../src/app/examenes/examenes.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__principal_principal_component__ = __webpack_require__("../../../../../src/app/principal/principal.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__registroalumno_registroalumno_component__ = __webpack_require__("../../../../../src/app/registroalumno/registroalumno.component.ts");
@@ -40,7 +44,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var routes = [
     { path: '', redirectTo: 'inicio', pathMatch: 'full', },
-    { path: 'inicio', component: __WEBPACK_IMPORTED_MODULE_2__inicio_inicio_component__["a" /* InicioComponent */] },
+    { path: 'inicio', component: __WEBPACK_IMPORTED_MODULE_2__principal_inicio_inicio_component__["a" /* InicioComponent */] },
     { path: 'registro-alumno', component: __WEBPACK_IMPORTED_MODULE_5__registroalumno_registroalumno_component__["a" /* RegistroalumnoComponent */] },
     { path: 'registro-profesor', component: __WEBPACK_IMPORTED_MODULE_6__registroprofesor_registroprofesor_component__["a" /* RegistroprofesorComponent */] },
     { path: 'examenes', component: __WEBPACK_IMPORTED_MODULE_3__examenes_examenes_component__["a" /* ExamenesComponent */] },
@@ -49,16 +53,16 @@ var routes = [
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
     }
+    AppRoutingModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+            imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forRoot(routes)],
+            exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */]]
+        })
+    ], AppRoutingModule);
     return AppRoutingModule;
 }());
-AppRoutingModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
-        imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forRoot(routes)],
-        exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */]]
-    })
-], AppRoutingModule);
 
-//# sourceMappingURL=app-routing.module.js.map
+
 
 /***/ }),
 
@@ -83,7 +87,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<router-outlet></router-outlet>\n"
+module.exports = "<router-outlet></router-outlet>"
 
 /***/ }),
 
@@ -92,12 +96,12 @@ module.exports = "<router-outlet></router-outlet>\n"
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_clarity_icons__ = __webpack_require__("../../../../clarity-icons/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_clarity_icons___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_clarity_icons__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_clarity_icons_shapes_essential_shapes__ = __webpack_require__("../../../../clarity-icons/shapes/essential-shapes.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_clarity_icons_shapes_essential_shapes___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_clarity_icons_shapes_essential_shapes__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -115,22 +119,21 @@ var AppComponent = (function () {
     function AppComponent(router) {
         this.router = router;
         this.title = 'app';
-        this.router.navigate(["/inicio"], { skipLocationChange: true });
-        // this.router.navigate(["/principal"],{skipLocationChange:true});
+        //   this.router.navigate(["/inicio"],{skipLocationChange:true});
+        this.router.navigate(["/principal"], { skipLocationChange: true });
     }
+    AppComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-root',
+            template: __webpack_require__("../../../../../src/app/app.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/app.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]])
+    ], AppComponent);
     return AppComponent;
 }());
-AppComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-root',
-        template: __webpack_require__("../../../../../src/app/app.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/app.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]) === "function" && _a || Object])
-], AppComponent);
 
-var _a;
-//# sourceMappingURL=app.component.js.map
+
 
 /***/ }),
 
@@ -139,19 +142,25 @@ var _a;
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_clarity_angular__ = __webpack_require__("../../../../clarity-angular/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/esm5/platform-browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/esm5/animations.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_clarity_angular__ = __webpack_require__("../../../../clarity-angular/clarity-angular/clarity-angular.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__inicio_inicio_component__ = __webpack_require__("../../../../../src/app/inicio/inicio.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__principal_inicio_inicio_component__ = __webpack_require__("../../../../../src/app/principal/inicio/inicio.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__examenes_examenes_component__ = __webpack_require__("../../../../../src/app/examenes/examenes.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__principal_principal_component__ = __webpack_require__("../../../../../src/app/principal/principal.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__registroalumno_registroalumno_component__ = __webpack_require__("../../../../../src/app/registroalumno/registroalumno.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__registroprofesor_registroprofesor_component__ = __webpack_require__("../../../../../src/app/registroprofesor/registroprofesor.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__examensitos_examensitos_component__ = __webpack_require__("../../../../../src/app/examensitos/examensitos.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_ng2_dnd__ = __webpack_require__("../../../../ng2-dnd/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_hammerjs__ = __webpack_require__("../../../../hammerjs/hammer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_hammerjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16_hammerjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__dialoguito_dialoguito_component__ = __webpack_require__("../../../../../src/app/dialoguito/dialoguito.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -171,35 +180,49 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
+
+
 var AppModule = (function () {
     function AppModule() {
     }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["J" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__principal_inicio_inicio_component__["a" /* InicioComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__examenes_examenes_component__["a" /* ExamenesComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__principal_principal_component__["a" /* PrincipalComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__registroalumno_registroalumno_component__["a" /* RegistroalumnoComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__registroprofesor_registroprofesor_component__["a" /* RegistroprofesorComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__examensitos_examensitos_component__["a" /* ExamensitosComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__dialoguito_dialoguito_component__["a" /* DialoguitoComponent */]
+            ],
+            entryComponents: [__WEBPACK_IMPORTED_MODULE_17__dialoguito_dialoguito_component__["a" /* DialoguitoComponent */]],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_6__app_routing_module__["a" /* AppRoutingModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_4__angular_http__["c" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_14__angular_material__["b" /* MatButtonModule */],
+                __WEBPACK_IMPORTED_MODULE_14__angular_material__["h" /* MatRadioModule */],
+                __WEBPACK_IMPORTED_MODULE_14__angular_material__["d" /* MatCheckboxModule */],
+                __WEBPACK_IMPORTED_MODULE_14__angular_material__["f" /* MatDialogModule */],
+                __WEBPACK_IMPORTED_MODULE_14__angular_material__["c" /* MatButtonToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+                __WEBPACK_IMPORTED_MODULE_15_ng2_dnd__["a" /* DndModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_5_clarity_angular__["a" /* ClarityModule */].forRoot()
+            ],
+            providers: [],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */]]
+        })
+    ], AppModule);
     return AppModule;
 }());
-AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["M" /* NgModule */])({
-        declarations: [
-            __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__inicio_inicio_component__["a" /* InicioComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__examenes_examenes_component__["a" /* ExamenesComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__principal_principal_component__["a" /* PrincipalComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__registroalumno_registroalumno_component__["a" /* RegistroalumnoComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__registroprofesor_registroprofesor_component__["a" /* RegistroprofesorComponent */]
-        ],
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_6__app_routing_module__["a" /* AppRoutingModule */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_http__["c" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-            __WEBPACK_IMPORTED_MODULE_5_clarity_angular__["a" /* ClarityModule */].forRoot()
-        ],
-        providers: [],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */]]
-    })
-], AppModule);
 
-//# sourceMappingURL=app.module.js.map
+
 
 /***/ }),
 
@@ -208,10 +231,9 @@ AppModule = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ClaveService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -234,15 +256,14 @@ var ClaveService = (function () {
         return this.http.get(this.direccionUrl + miClave)
             .map(function (res) { return res.json(); });
     };
+    ClaveService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+    ], ClaveService);
     return ClaveService;
 }());
-ClaveService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
-], ClaveService);
 
-var _a;
-//# sourceMappingURL=clave.service.js.map
+
 
 /***/ }),
 
@@ -251,10 +272,9 @@ var _a;
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ClaveprofesorService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -277,15 +297,14 @@ var ClaveprofesorService = (function () {
         return this.http.get(this.direccionUrl + miClave)
             .map(function (res) { return res.json(); });
     };
+    ClaveprofesorService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+    ], ClaveprofesorService);
     return ClaveprofesorService;
 }());
-ClaveprofesorService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
-], ClaveprofesorService);
 
-var _a;
-//# sourceMappingURL=claveprofesor.service.js.map
+
 
 /***/ }),
 
@@ -294,10 +313,9 @@ var _a;
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CorreoService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -319,15 +337,84 @@ var CorreoService = (function () {
         return this.http.get(this.direccionUrl)
             .map(function (res) { return res.statusText; });
     };
+    CorreoService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+    ], CorreoService);
     return CorreoService;
 }());
-CorreoService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
-], CorreoService);
 
-var _a;
-//# sourceMappingURL=correo.service.js.map
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/dialoguito/dialoguito.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n  .malo {\n    background: red;\n    color: black;\n  }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/dialoguito/dialoguito.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<h1 mat-dialog-title>¡¡Correcto!!</h1>\n<div mat-dialog-content>\n  <!--\n  <p>Correcto</p>\n  \n  <mat-form-field>\n    <input matInput tabindex=\"1\" [(ngModel)]=\"data.animal\">\n  </mat-form-field>\n-->\n</div>\n<div mat-dialog-actions>\n  <button  mat-raised-button color=\"accent\" [mat-dialog-close]=\"data.animal\" tabindex=\"2\"  >Aceptar</button>\n<!--  <button mat-button (click)=\"onNoClick()\" tabindex=\"-1\">No Thanks</button>-->\n</div>\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/dialoguito/dialoguito.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialoguitoComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+var DialoguitoComponent = (function () {
+    function DialoguitoComponent(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+    }
+    DialoguitoComponent.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    DialoguitoComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-dialoguito',
+            template: __webpack_require__("../../../../../src/app/dialoguito/dialoguito.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/dialoguito/dialoguito.component.css")],
+        }),
+        __param(1, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MAT_DIALOG_DATA */])),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_material__["g" /* MatDialogRef */], Object])
+    ], DialoguitoComponent);
+    return DialoguitoComponent;
+}());
+
+
 
 /***/ }),
 
@@ -344,7 +431,7 @@ var Estatus = (function () {
     return Estatus;
 }());
 
-//# sourceMappingURL=estatus.js.map
+
 
 /***/ }),
 
@@ -378,9 +465,9 @@ module.exports = "<clr-wizard #wizardlg [(clrWizardOpen)]=\"lgOpen\" clrWizardSi
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExamenesComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_clarity_angular__ = __webpack_require__("../../../../clarity-angular/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_clarity_angular__ = __webpack_require__("../../../../clarity-angular/clarity-angular/clarity-angular.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__clave_service__ = __webpack_require__("../../../../../src/app/clave.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__estatus__ = __webpack_require__("../../../../../src/app/estatus.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -472,32 +559,133 @@ var ExamenesComponent = (function () {
         this.oculta = this.estatus.success;
         return !this.estatus.success;
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("wizardlg"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_clarity_angular__["b" /* Wizard */])
+    ], ExamenesComponent.prototype, "wizardLarge", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("myForm"),
+        __metadata("design:type", Object)
+    ], ExamenesComponent.prototype, "formData", void 0);
+    ExamenesComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-examenes',
+            template: __webpack_require__("../../../../../src/app/examenes/examenes.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/examenes/examenes.component.css")],
+            providers: [__WEBPACK_IMPORTED_MODULE_3__clave_service__["a" /* ClaveService */]]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */], __WEBPACK_IMPORTED_MODULE_3__clave_service__["a" /* ClaveService */]])
+    ], ExamenesComponent);
     return ExamenesComponent;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])("wizardlg"),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_clarity_angular__["b" /* Wizard */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_clarity_angular__["b" /* Wizard */]) === "function" && _a || Object)
-], ExamenesComponent.prototype, "wizardLarge", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])("myForm"),
-    __metadata("design:type", Object)
-], ExamenesComponent.prototype, "formData", void 0);
-ExamenesComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-examenes',
-        template: __webpack_require__("../../../../../src/app/examenes/examenes.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/examenes/examenes.component.css")],
-        providers: [__WEBPACK_IMPORTED_MODULE_3__clave_service__["a" /* ClaveService */]]
-    }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__clave_service__["a" /* ClaveService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__clave_service__["a" /* ClaveService */]) === "function" && _c || Object])
-], ExamenesComponent);
 
-var _a, _b, _c;
-//# sourceMappingURL=examenes.component.js.map
+
 
 /***/ }),
 
-/***/ "../../../../../src/app/inicio/inicio.component.css":
+/***/ "../../../../../src/app/examensitos/examensitos.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".example-radio-group {\n    display: -webkit-inline-box;\n    display: -ms-inline-flexbox;\n    display: inline-flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n  }\n  \n  .example-radio-button {\n    margin: 5px;\n  }\n  \n  .example-selected-value {\n    margin: 15px 0;\n  }\n  \n  .algo{\n    display:inline-block;\n    margin: 10px;\n  }\n  .morado{\n    background:green;\n    color: white;\n  }\n  .naranja{\n    background:orange;\n    color: white;\n    margin: 10px;\n  }", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/examensitos/examensitos.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h1>Exámen diagnóstico</h1>\n<h2>Informática 1, lee cuiddadosamente y contesta cada pregunta, ¡Exito!</h2>\n\n\n\n<h3>1. Es una excelente herramienta para la comunicación humana y la enseñanza:</h3>\n<mat-radio-group class=\"example-radio-group\">\n    <mat-radio-button class=\"example-radio-button\" value=\"1\">Libros</mat-radio-button>\n    <mat-radio-button class=\"example-radio-button\" value=\"2\">Revistas</mat-radio-button>\n    <mat-radio-button class=\"example-radio-button\" value=\"3\">Artículos</mat-radio-button>\n    <mat-radio-button class=\"example-radio-button\" value=\"4\">Internet</mat-radio-button>\n  </mat-radio-group>\n\n<div>\n<button mat-raised-button class=\"naranja\" (click)=\"openDialog()\">¡Checar respuesta!</button>\n</div>\n<div>\n  <h3>2. ¿Que significan las iniciales W.W.W.?</h3>\n  <mat-radio-group class=\"example-radio-group\">\n    <mat-radio-button class=\"example-radio-button\" value=\"1\">World Wide World</mat-radio-button>\n    <mat-radio-button class=\"example-radio-button\" value=\"2\">Wide Web Worl</mat-radio-button>\n    <mat-radio-button class=\"example-radio-button\" value=\"3\">World Web Wide</mat-radio-button>\n    <mat-radio-button class=\"example-radio-button\" value=\"4\">Wold Wide Web</mat-radio-button>\n  </mat-radio-group>\n</div>\n<div>\n  <button mat-raised-button class=\"naranja\" (click)=\"openDialog()\">¡Checar respuesta!</button>\n</div>\n\n<div>\n    <h3>3.¿Qué concepto es correcto para la definición Correo Electrónico? </h3>\n    <mat-radio-group class=\"example-radio-group\">\n      <mat-radio-button class=\"example-radio-button\" value=\"1\">Es un sistema de mensajería electrónica personal de alta velocidad. </mat-radio-button>\n      <mat-radio-button class=\"example-radio-button\" value=\"2\">Opera sobre la base de casillas electrónicas donde se almacena la \n          información</mat-radio-button>\n      <mat-radio-button class=\"example-radio-button\" value=\"3\">No se requiera la presencia en línea del usuario-destino</mat-radio-button>\n      <mat-radio-button class=\"example-radio-button\" value=\"4\">Todos los anteriores</mat-radio-button>\n    </mat-radio-group>\n  </div>\n  <div>\n    <button mat-raised-button class=\"naranja\" (click)=\"openDialog()\">¡Checar respuesta!</button>\n  </div>\n\n  <div>\n      <h3>4.Menciona un ejemplo de mensajería instantánea usaron \n          computadoras?</h3>\n      <mat-radio-group class=\"example-radio-group\">\n        <mat-radio-button class=\"example-radio-button\" value=\"1\">Explorer</mat-radio-button>\n        <mat-radio-button class=\"example-radio-button\" value=\"2\">Ordenador</mat-radio-button>\n        <mat-radio-button class=\"example-radio-button\" value=\"3\">Whatsapp</mat-radio-button>\n        <mat-radio-button class=\"example-radio-button\" value=\"4\">Cifrado</mat-radio-button>\n      </mat-radio-group>\n    </div>\n    <div>\n      <button mat-raised-button class=\"naranja\" (click)=\"openDialog()\">¡Checar respuesta!</button>\n    </div>\n\n    <div>\n        <h3>5.¿Cual no es un navegador web</h3>\n        <mat-radio-group class=\"example-radio-group\">\n          <mat-radio-button class=\"example-radio-button\" value=\"1\">Chrome</mat-radio-button>\n          <mat-radio-button class=\"example-radio-button\" value=\"2\">Google</mat-radio-button>\n          <mat-radio-button class=\"example-radio-button\" value=\"3\">Expĺorer</mat-radio-button>\n          <mat-radio-button class=\"example-radio-button\" value=\"4\">Mozilla Firefox</mat-radio-button>\n        </mat-radio-group>\n      </div>\n      <div>\n        <button mat-raised-button class=\"naranja\" (click)=\"openDialog()\">¡Checar respuesta!</button>\n      </div>\n\n      <div>\n          <h3>6.¿A qué se llama buscadores?</h3>\n          <mat-radio-group class=\"example-radio-group\">\n            <mat-radio-button class=\"example-radio-button\" value=\"1\">Programas parecidos a dos servidores</mat-radio-button>\n            <mat-radio-button class=\"example-radio-button\" value=\"2\">Son aplicaciones que crean nuevas páginas</mat-radio-button>\n            <mat-radio-button class=\"example-radio-button\" value=\"3\">Son programas o aplicaciones alojadas en una página web</mat-radio-button>\n            <mat-radio-button class=\"example-radio-button\" value=\"4\">Son páginas que nos permiten en tiempo real encontrar información</mat-radio-button>\n          </mat-radio-group>\n        </div>\n        <div>\n          <button mat-raised-button class=\"naranja\" (click)=\"openDialog()\">¡Checar respuesta!</button>\n        </div>\n\n        <div>\n            <h3>7.¿Cuáles son las teclas de atajo usadas en este mismo orden para: Cortar, Copiar y Pegar?</h3>\n            <mat-radio-group class=\"example-radio-group\">\n              <mat-radio-button class=\"example-radio-button\" value=\"1\">Alt + N, Ctrl + Q y Ctrl + P</mat-radio-button>\n              <mat-radio-button class=\"example-radio-button\" value=\"2\">Ctrl + X, Ctrl + C y Ctrl + V</mat-radio-button>\n              <mat-radio-button class=\"example-radio-button\" value=\"3\">Alt + F4, Ctrl + Del y Ctrl + A</mat-radio-button>\n              <mat-radio-button class=\"example-radio-button\" value=\"4\">Ctrl + Alt + Del, F5 y Ctrl + D</mat-radio-button>\n            </mat-radio-group>\n          </div>\n          <div>\n            <button mat-raised-button class=\"naranja\" (click)=\"openDialog()\">¡Checar respuesta!</button>\n          </div>\n\n          <div>\n              <h3>8.¿Cuál es el procedimiento usado para crear una carpeta en Windows? </h3>\n              <mat-radio-group class=\"example-radio-group\">\n                <mat-radio-button class=\"example-radio-button\" value=\"1\">Ir a Inicio, click en Mis Documentos, después click en Nueva Carpeta</mat-radio-button>\n                <mat-radio-button class=\"example-radio-button\" value=\"2\">Clic con el botón derecho y después clic en Carpeta</mat-radio-button>\n                <mat-radio-button class=\"example-radio-button\" value=\"3\">Click con el botón derecho, click en Nuevo y después click en Carpeta</mat-radio-button>\n                <mat-radio-button class=\"example-radio-button\" value=\"4\">Click con el botón derecho, click en Carpeta, click en Nuevo</mat-radio-button>\n              </mat-radio-group>\n            </div>\n            <div>\n              <button mat-raised-button class=\"naranja\" (click)=\"openDialog()\">¡Checar respuesta!</button>\n            </div>\n\n\n\n\n<!--\n<div class=\"algo\">\n  <h2>Columna Opciones</h2>\n  <p>Mi parrafo 1</p>\n</div>\n<div class=\"algo\">\n  <h2>Columna Respuestas</h2>\n  <p>Mi parrafo 2</p>\n</div>\n-->"
+
+/***/ }),
+
+/***/ "../../../../../src/app/examensitos/examensitos.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExamensitosComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dialoguito_dialoguito_component__ = __webpack_require__("../../../../../src/app/dialoguito/dialoguito.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ExamensitosComponent = (function () {
+    function ExamensitosComponent(dialog) {
+        this.dialog = dialog;
+        this.simpleDrop = null;
+        this.animal = "Garto";
+        this.name = "Misufuz";
+        this.oculta = true;
+    }
+    ExamensitosComponent.prototype.ngOnInit = function () {
+    };
+    ExamensitosComponent.prototype.openDialog = function () {
+        var _this = this;
+        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_2__dialoguito_dialoguito_component__["a" /* DialoguitoComponent */], {
+            width: '140px',
+            data: { name: this.name, animal: this.animal }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            console.log('The dialog was closed');
+            _this.animal = result;
+        });
+    };
+    ExamensitosComponent.prototype.checarRespuesta = function () {
+        this.oculta = false;
+    };
+    ExamensitosComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-examensitos',
+            template: __webpack_require__("../../../../../src/app/examensitos/examensitos.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/examensitos/examensitos.component.css")],
+            providers: [__WEBPACK_IMPORTED_MODULE_2__dialoguito_dialoguito_component__["a" /* DialoguitoComponent */]]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_material__["e" /* MatDialog */]])
+    ], ExamensitosComponent);
+    return ExamensitosComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/materia.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Materia; });
+var Materia = (function () {
+    function Materia(campo, nombre) {
+        this.campo = campo;
+        this.nombre = nombre;
+    }
+    return Materia;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/principal/inicio/inicio.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -515,20 +703,20 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/inicio/inicio.component.html":
+/***/ "../../../../../src/app/principal/inicio/inicio.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "\n<div class=\"login-wrapper\">\n    <div class=\"login\">\n        <label class=\"title\">\n            <h3 class=\"welcome\">Benvenido a</h3>\n            <img src=\"assets/logochico.jpg\">\n        </label>\n        <div class=\"login-group\">\n            <div class=\"auth-source select\">\n                <select id=\"login-auth-source-1\">\n                    <option>Profesor</option>\n                    <option>Alumno</option>\n                </select>\n            </div>\n            <input class=\"username\" [(ngModel)]=\"login\" id=\"login_username\" placeholder=\"Correo electrónico\">\n            <input type=\"password\" class=\"password\" [(ngModel)]=\"password\" id=\"login_password\" placeholder=\"Contraseña\">\n            <!-- <div class=\"checkbox\">\n                <input type=\"checkbox\" id=\"rememberme\">\n               <label for=\"rememberme\">\n                    Remember me\n                </label>\n            </div>\n              -->\n                  <button (click)=\"autenticar()\" class=\"btn btn-primary\">Ingresar</button>\n            <div [hidden]=\"estaOculta\">\n              <div class=\"error active\">\n                Usuario o contraseña inválidos, si no la recuerdas proporciona tu correo para enviartela y\n                oprimer el boton \"Recuperar Contraseña\"\n              </div>\n              <div class=\"login-group\">\n                <input type=\"text-help\" [(ngModel)]=\"email\" id=\"email\" placeholder=\"Introduce tu Correo\">\n                <button click=\"recuperarContrasena()\" class=\"btn btn-outline-warning\">Recuperar Contraseña</button>\n              </div>\n            </div>\n\n\n           <!-- <a href=\"javascript://\" class=\"signup\">Sign up for a Company ID</a>-->\n\n         <h5>¿No tienes una cuenta? Regístrate </h5>\n\n        <button (click)=\"registrarProfesor()\" class=\"btn btn-warning\"> Registro Maestro</button>\n        <button (click)=\"registrarAlumno()\" class=\"btn btn-danger\">Registro Alumno</button>\n\n        </div>\n    </div>\n</div>\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/inicio/inicio.component.ts":
+/***/ "../../../../../src/app/principal/inicio/inicio.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InicioComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__correo_service__ = __webpack_require__("../../../../../src/app/correo.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__profesor_service__ = __webpack_require__("../../../../../src/app/profesor.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -587,37 +775,19 @@ var InicioComponent = (function () {
             this.estaOculta = false;
         }
     };
+    InicioComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-inicio',
+            template: __webpack_require__("../../../../../src/app/principal/inicio/inicio.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/principal/inicio/inicio.component.css")],
+            providers: [__WEBPACK_IMPORTED_MODULE_2__correo_service__["a" /* CorreoService */], __WEBPACK_IMPORTED_MODULE_3__profesor_service__["a" /* ProfesorService */]]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */], __WEBPACK_IMPORTED_MODULE_2__correo_service__["a" /* CorreoService */], __WEBPACK_IMPORTED_MODULE_3__profesor_service__["a" /* ProfesorService */]])
+    ], InicioComponent);
     return InicioComponent;
 }());
-InicioComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-inicio',
-        template: __webpack_require__("../../../../../src/app/inicio/inicio.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/inicio/inicio.component.css")],
-        providers: [__WEBPACK_IMPORTED_MODULE_2__correo_service__["a" /* CorreoService */], __WEBPACK_IMPORTED_MODULE_3__profesor_service__["a" /* ProfesorService */]]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__correo_service__["a" /* CorreoService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__correo_service__["a" /* CorreoService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__profesor_service__["a" /* ProfesorService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__profesor_service__["a" /* ProfesorService */]) === "function" && _c || Object])
-], InicioComponent);
 
-var _a, _b, _c;
-//# sourceMappingURL=inicio.component.js.map
 
-/***/ }),
-
-/***/ "../../../../../src/app/materia.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Materia; });
-var Materia = (function () {
-    function Materia(campo, nombre) {
-        this.campo = campo;
-        this.nombre = nombre;
-    }
-    return Materia;
-}());
-
-//# sourceMappingURL=materia.js.map
 
 /***/ }),
 
@@ -642,7 +812,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/principal/principal.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main-container\">\n  <div class=\"alert alert-app-level alert-info\">\n    \n    <div class=\"alert-items\">\n      <div class=\"alert-item static\">\n          <div class=\"alert-icon-wrapper\">\n              <clr-icon class=\"alert-icon\" shape=\"logout\"></clr-icon>\n          </div>\n          <div class=\"alert-text\">\n              Grupo Eductivo Editorial RADO\n          </div>\n          <div class=\"alert-actions\">\n              <button class=\"btn alert-action\"  (click)=\"salir()\" >Salir</button>\n          </div>\n      </div>\n  </div>\n\n\n\n\n\n\n  </div>\n  <header class=\"header header-6\">\n    <div class=\"branding\">\n      <div class=\"title\">Tareas Y Exámenes</div>\n    </div>\n  </header>\n  <nav class=\"subnav\">\n      ...\n  </nav>\n  <div class=\"content-container\">\n      <div class=\"content-area\">\n        <!--<img src=\"assets/imagenes/logo2.png\">-->\n        <section class=\"form-block\">\n        <label>Perfil</label>\n        <div class=\"form-group\">\n            <label for=\"selects_1\">Sistema al que pertences</label>\n            <div class=\"select\">\n                <select id=\"selects_1\">\n                    <option>BACHILLERES</option>\n                    <option>CONALEP</option>\n                    <option>CETIS</option>\n                    <option>CBETIS</option>\n                    <option>CECYT</option>\n                    <option>COBAEM</option>\n                    <option>UNAM</option>\n                </select>\n            </div>\n            <label>Selecciona los campos disciplinarios</label>\n            <clr-datagrid [(clrDgSelected)]=\"selected\">\n                <clr-dg-action-bar>\n                    <div class=\"btn-group btn-sm\" role=\"group\" aria-label=\"Available Actions\" *ngIf=\"selected.length > 0\">\n                        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"onAdd()\"><clr-icon shape=\"plus\"></clr-icon>Agregar a mis materias</button>\n                    <!--    <button type=\"button\" class=\"btn btn-secondary\" (click)=\"onDelete()\" ><clr-icon shape=\"close\"></clr-icon> Delete</button> -->\n                    <!--     <button type=\"button\" class=\"btn btn-secondary\" (click)=\"onEdit()\" *ngIf=\"selected.length == 1\"><clr-icon shape=\"pencil\"></clr-icon> Edit</button> -->\n                    </div>\n                </clr-dg-action-bar>\n                <clr-dg-column>Campo Disciplinario</clr-dg-column>\n                <clr-dg-column>Nombre de la materia</clr-dg-column>\n               \n            \n                <clr-dg-row *clrDgItems=\"let materia of materias\" [clrDgItem]=\"materia\">\n                   \n                    <clr-dg-cell>{{materia.campo}}</clr-dg-cell>\n                    <clr-dg-cell>{{materia.nombre}}</clr-dg-cell>\n                 \n                </clr-dg-row>\n                <clr-dg-footer>\n                    {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}}\n                    de {{pagination.totalItems}} materias\n                    <clr-dg-pagination #pagination [clrDgPageSize]=\"5\"></clr-dg-pagination>\n                </clr-dg-footer>\n             \n            </clr-datagrid>\n            <br><br>\n            Materias seleccionadas: <span class=\"label label-info\" *ngFor=\"let materia of selected\">{{materia.nombre}}</span>\n\n        </div> <!-- termina form-group -->\n        </section>\n\n      </div> <!-- Termina content-area -->\n        \n\n      <nav class=\"sidenav\">\n          ...\n      </nav>\n  </div>\n</div>\n\n"
+module.exports = "<div class=\"main-container\">\n  <div class=\"alert alert-app-level alert-info\">\n    \n    <div class=\"alert-items\">\n      <div class=\"alert-item static\">\n          <div class=\"alert-icon-wrapper\">\n              <clr-icon class=\"alert-icon\" shape=\"logout\"></clr-icon>\n          </div>\n          <div class=\"alert-text\">\n              Grupo Eductivo Editorial RADO\n          </div>\n          <div class=\"alert-actions\">\n              <button class=\"btn alert-action\"  (click)=\"salir()\" >Salir</button>\n          </div>\n      </div>\n  </div>\n\n\n\n\n\n\n  </div>\n  <header class=\"header header-6\">\n    <div class=\"branding\">\n      <div class=\"title\">GEDUCATIVO</div>\n    </div>\n    <div class=\"header-nav\">\n        <a href=\"javascript://\" class=\"active nav-link nav-text\">Exámenes</a>\n        <a href=\"javascript://\" class=\"nav-link nav-text\">Evaluaciones</a>\n    </div>\n    <div class=\"header-actions\">\n        <a href=\"...\" class=\"nav-link nav-icon\">\n            <clr-icon shape=\"envelope\"></clr-icon>\n        </a>\n    </div>\n  </header>\n \n  <div class=\"content-container\">\n      <div class=\"content-area\">\n        <!--<img src=\"assets/imagenes/logo2.png\">-->\n       \n         <app-examensitos></app-examensitos>\n      </div> <!-- Termina content-area -->\n        \n\n      <nav class=\"sidenav\">\n            <section class=\"sidenav-content\">\n                    <a href=\"javascript://\" class=\"nav-link active\">\n                        Grupos\n                    </a>\n                    <a href=\"javascript://\" class=\"nav-link\">\n                        Ejercicios\n                    </a>\n                    <section class=\"nav-group collapsible\">\n                        <input id=\"tabexample1\" type=\"checkbox\">\n                        <label for=\"tabexample1\">Tareas</label>\n                        <ul class=\"nav-list\">\n                            <li><a class=\"nav-link\">Evaluaciones</a></li>\n                            <li><a class=\"nav-link\">Estadísticas</a></li>\n                        </ul>\n                    </section>\n                    \n                </section>\n       \n      </nav>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -651,9 +821,8 @@ module.exports = "<div class=\"main-container\">\n  <div class=\"alert alert-app
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PrincipalComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__materia__ = __webpack_require__("../../../../../src/app/materia.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -665,93 +834,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
 var PrincipalComponent = (function () {
     function PrincipalComponent(router) {
         this.router = router;
-        this.materias = [];
-        this.toAdd = [];
-        this.toDelete = [];
-        this._selected = [];
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 1'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 2'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 3'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 4'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 5'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Matemáticas', 'Matemáticas 6'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Comunicación', 'Lenguaje y comunicación 1'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Comunicación', 'Lenguaje y comunicación 2'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Comunicación', 'Lenguaje y literatura 1'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Comunicación', 'Lenguaje y literatura 2'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Comunicación', 'Taller de análisis de los textos 1'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Comunicación', 'Taller de análisis de los textos 2'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Informática', 'Informática 1'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Informática', 'Informática 2'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Informática', 'Informática 3'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Informática', 'Informática 4'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Desarrollo Humano', 'Orientación educativa'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Desarrollo Humano', 'Orientación vocacional'));
-        this.materias.push(new __WEBPACK_IMPORTED_MODULE_1__materia__["a" /* Materia */]('Desarrollo Humano', 'Actividades deportivas'));
     }
-    Object.defineProperty(PrincipalComponent.prototype, "selected", {
-        get: function () {
-            return this._selected;
-        },
-        set: function (selection) {
-            this._selected = selection;
-            this.cleanUp();
-        },
-        enumerable: true,
-        configurable: true
-    });
-    PrincipalComponent.prototype.cleanUp = function () {
-        this.toAdd = [];
-        this.toDelete = [];
-        this.toEdit = null;
-    };
-    PrincipalComponent.prototype.onDelete = function (materia) {
-        this.cleanUp();
-        if (materia) {
-            this.toDelete = [materia];
-        }
-        else {
-            this.toDelete = this.selected.slice();
-        }
-    };
-    PrincipalComponent.prototype.onEdit = function (materia) {
-        this.cleanUp();
-        if (materia) {
-            this.toEdit = materia;
-        }
-        else {
-            this.toEdit = this.selected[0];
-            console.log(this.selected[0]);
-        }
-    };
-    PrincipalComponent.prototype.onAdd = function () {
-        this.cleanUp();
-        this.toAdd = this.selected.slice();
-        console.log(this.toAdd);
-    };
     PrincipalComponent.prototype.ngOnInit = function () {
     };
     PrincipalComponent.prototype.salir = function () {
         this.router.navigate(["/inicio"], { skipLocationChange: true });
         // this.estaOculta=true;
     };
+    PrincipalComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-principal',
+            template: __webpack_require__("../../../../../src/app/principal/principal.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/principal/principal.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]])
+    ], PrincipalComponent);
     return PrincipalComponent;
 }());
-PrincipalComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-principal',
-        template: __webpack_require__("../../../../../src/app/principal/principal.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/principal/principal.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _a || Object])
-], PrincipalComponent);
 
-var _a;
-//# sourceMappingURL=principal.component.js.map
+
 
 /***/ }),
 
@@ -760,10 +864,9 @@ var _a;
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfesorService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -791,15 +894,14 @@ var ProfesorService = (function () {
         return this.http.post(this.direccionUrl, JSON.stringify(profesor), { headers: this.headers }).
             map(function (respuesta) { return respuesta.json(); });
     };
+    ProfesorService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+    ], ProfesorService);
     return ProfesorService;
 }());
-ProfesorService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
-], ProfesorService);
 
-var _a;
-//# sourceMappingURL=profesor.service.js.map
+
 
 /***/ }),
 
@@ -833,9 +935,9 @@ module.exports = "<clr-wizard #wizardlg [(clrWizardOpen)]=\"lgOpen\" clrWizardSi
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegistroalumnoComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_clarity_angular__ = __webpack_require__("../../../../clarity-angular/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_clarity_angular__ = __webpack_require__("../../../../clarity-angular/clarity-angular/clarity-angular.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__clave_service__ = __webpack_require__("../../../../../src/app/clave.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__estatus__ = __webpack_require__("../../../../../src/app/estatus.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -930,28 +1032,27 @@ var RegistroalumnoComponent = (function () {
     RegistroalumnoComponent.prototype.recupararContrasena = function () {
         console.log("Contraseña recuperada");
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("wizardlg"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_clarity_angular__["b" /* Wizard */])
+    ], RegistroalumnoComponent.prototype, "wizardLarge", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("myForm"),
+        __metadata("design:type", Object)
+    ], RegistroalumnoComponent.prototype, "formData", void 0);
+    RegistroalumnoComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-registroalumno',
+            template: __webpack_require__("../../../../../src/app/registroalumno/registroalumno.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/registroalumno/registroalumno.component.css")],
+            providers: [__WEBPACK_IMPORTED_MODULE_3__clave_service__["a" /* ClaveService */]]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */], __WEBPACK_IMPORTED_MODULE_3__clave_service__["a" /* ClaveService */]])
+    ], RegistroalumnoComponent);
     return RegistroalumnoComponent;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])("wizardlg"),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_clarity_angular__["b" /* Wizard */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_clarity_angular__["b" /* Wizard */]) === "function" && _a || Object)
-], RegistroalumnoComponent.prototype, "wizardLarge", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])("myForm"),
-    __metadata("design:type", Object)
-], RegistroalumnoComponent.prototype, "formData", void 0);
-RegistroalumnoComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-registroalumno',
-        template: __webpack_require__("../../../../../src/app/registroalumno/registroalumno.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/registroalumno/registroalumno.component.css")],
-        providers: [__WEBPACK_IMPORTED_MODULE_3__clave_service__["a" /* ClaveService */]]
-    }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__clave_service__["a" /* ClaveService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__clave_service__["a" /* ClaveService */]) === "function" && _c || Object])
-], RegistroalumnoComponent);
 
-var _a, _b, _c;
-//# sourceMappingURL=registroalumno.component.js.map
+
 
 /***/ }),
 
@@ -985,9 +1086,9 @@ module.exports = "<clr-wizard #wizardlg [(clrWizardOpen)]=\"lgOpen\" clrWizardSi
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegistroprofesorComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_clarity_angular__ = __webpack_require__("../../../../clarity-angular/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_clarity_angular__ = __webpack_require__("../../../../clarity-angular/clarity-angular/clarity-angular.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__claveprofesor_service__ = __webpack_require__("../../../../../src/app/claveprofesor.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__estatus__ = __webpack_require__("../../../../../src/app/estatus.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__materia__ = __webpack_require__("../../../../../src/app/materia.ts");
@@ -1266,40 +1367,40 @@ var RegistroprofesorComponent = (function () {
         console.log(this.materiaSeleccionada);
         this.materiasAgregadas.splice(this.materiasAgregadas.indexOf(this.materiaSeleccionada), 1);
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("wizardlg"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_clarity_angular__["b" /* Wizard */])
+    ], RegistroprofesorComponent.prototype, "wizardLarge", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("myForm"),
+        __metadata("design:type", Object)
+    ], RegistroprofesorComponent.prototype, "formData", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("myFormContrasena"),
+        __metadata("design:type", Object)
+    ], RegistroprofesorComponent.prototype, "formDataContrasena", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("myFormContrasena"),
+        __metadata("design:type", Object)
+    ], RegistroprofesorComponent.prototype, "formDataContrasena2", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("myFormEmail"),
+        __metadata("design:type", Object)
+    ], RegistroprofesorComponent.prototype, "formDataEmail", void 0);
+    RegistroprofesorComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-registroprofesor',
+            template: __webpack_require__("../../../../../src/app/registroprofesor/registroprofesor.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/registroprofesor/registroprofesor.component.css")],
+            providers: [__WEBPACK_IMPORTED_MODULE_3__claveprofesor_service__["a" /* ClaveprofesorService */], __WEBPACK_IMPORTED_MODULE_6__profesor_service__["a" /* ProfesorService */]]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */], __WEBPACK_IMPORTED_MODULE_3__claveprofesor_service__["a" /* ClaveprofesorService */],
+            __WEBPACK_IMPORTED_MODULE_6__profesor_service__["a" /* ProfesorService */]])
+    ], RegistroprofesorComponent);
     return RegistroprofesorComponent;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])("wizardlg"),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_clarity_angular__["b" /* Wizard */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_clarity_angular__["b" /* Wizard */]) === "function" && _a || Object)
-], RegistroprofesorComponent.prototype, "wizardLarge", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])("myForm"),
-    __metadata("design:type", Object)
-], RegistroprofesorComponent.prototype, "formData", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])("myFormContrasena"),
-    __metadata("design:type", Object)
-], RegistroprofesorComponent.prototype, "formDataContrasena", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])("myFormContrasena"),
-    __metadata("design:type", Object)
-], RegistroprofesorComponent.prototype, "formDataContrasena2", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])("myFormEmail"),
-    __metadata("design:type", Object)
-], RegistroprofesorComponent.prototype, "formDataEmail", void 0);
-RegistroprofesorComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-registroprofesor',
-        template: __webpack_require__("../../../../../src/app/registroprofesor/registroprofesor.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/registroprofesor/registroprofesor.component.css")],
-        providers: [__WEBPACK_IMPORTED_MODULE_3__claveprofesor_service__["a" /* ClaveprofesorService */], __WEBPACK_IMPORTED_MODULE_6__profesor_service__["a" /* ProfesorService */]]
-    }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__claveprofesor_service__["a" /* ClaveprofesorService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__claveprofesor_service__["a" /* ClaveprofesorService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__profesor_service__["a" /* ProfesorService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__profesor_service__["a" /* ProfesorService */]) === "function" && _d || Object])
-], RegistroprofesorComponent);
 
-var _a, _b, _c, _d;
-//# sourceMappingURL=registroprofesor.component.js.map
+
 
 /***/ }),
 
@@ -1312,11 +1413,10 @@ var _a, _b, _c, _d;
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
-// The file contents for the current environment will overwrite these during build.
 var environment = {
     production: false
 };
-//# sourceMappingURL=environment.js.map
+
 
 /***/ }),
 
@@ -1325,8 +1425,8 @@ var environment = {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/esm5/platform-browser-dynamic.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("../../../../../src/app/app.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 
@@ -1334,10 +1434,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* enableProdMode */])();
 }
-Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
-//# sourceMappingURL=main.js.map
+Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
+    .catch(function (err) { return console.log(err); });
+
 
 /***/ }),
 
