@@ -591,7 +591,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".example-radio-group {\n    display: -webkit-inline-box;\n    display: -ms-inline-flexbox;\n    display: inline-flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n  }\n  \n  .example-radio-button {\n    margin: 5px;\n  }\n  \n  .example-selected-value {\n    margin: 15px 0;\n  }\n  \n  .algo{\n    display:inline-block;\n    margin: 10px;\n  }\n  .morado{\n    background:green;\n    color: white;\n  }\n  .naranja{\n    background:orange;\n    color: white;\n    margin: 10px;\n  }", ""]);
+exports.push([module.i, ".example-radio-group {\n    display: -webkit-inline-box;\n    display: -ms-inline-flexbox;\n    display: inline-flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n  }\n  \n  .example-radio-button {\n    margin: 5px;\n  }\n  \n  .example-selected-value {\n    margin: 15px 0;\n  }\n  \n  .algo{\n    display:inline-block;\n    margin: 10px;\n  }\n  .morado{\n    background:green;\n    color: white;\n  }\n  .naranja{\n    background:orchid;\n    color: white;\n    margin: 10px;\n  }", ""]);
 
 // exports
 
