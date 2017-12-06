@@ -3,7 +3,7 @@ package org.geducativo.geradmin3;
 
 
 
-public class Sistema {
+public class Plantel {
 
     String nombre;
 

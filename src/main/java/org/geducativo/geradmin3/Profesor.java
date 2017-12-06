@@ -17,14 +17,14 @@ public class Profesor {
     String paterno;
     String materno;
 
-    Sistema sistema;
+    Plantel plantel;
 
-    public Sistema getSistema() {
-        return sistema;
+    public Plantel getSistema() {
+        return plantel;
     }
 
-    public void setSistema(Sistema sistema) {
-        this.sistema = sistema;
+    public void setSistema(Plantel sistema) {
+        this.plantel = plantel;
     }
 
     String turno;
@@ -33,6 +33,14 @@ public class Profesor {
     String password;                                                                                              
 
     String celular;
+    char registrado;
+
+    ArrayList<Materia> materias;
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 
     public String getCelular() {
         return celular;
@@ -42,9 +50,7 @@ public class Profesor {
         this.celular = celular;
     }
 
-    char registrado;
 
-    ArrayList<Materia> materias;
 
     public ArrayList<Materia> getMaterias() {
         return materias;

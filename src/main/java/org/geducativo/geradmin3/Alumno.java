@@ -13,17 +13,83 @@ public class Alumno {
     String paterno;
     String materno;
 
-    Sistema sistema;
+    Plantel plantel;
     String turno;
-
+    String celular;
     String email;
     String password;
+    String claveProfesor;
 
+    @Override
+    public String toString() {
+        return "Alumno{" +
+                "clave='" + clave + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", paterno='" + paterno + '\'' +
+                ", materno='" + materno + '\'' +
+                ", plantel=" + plantel +
+                ", turno='" + turno + '\'' +
+                ", celular='" + celular + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", claveProfesor='" + claveProfesor + '\'' +
+                ", registrado=" + registrado +
+                ", materias=" + materias +
+                '}';
+    }
 
+    public String getClaveProfesor() {
+        return claveProfesor;
+    }
+
+    public void setClaveProfesor(String claveProfesor) {
+        this.claveProfesor = claveProfesor;
+    }
 
     char registrado;
 
     ArrayList<Materia> materias;
+
+    public Alumno(String nombre, String paterno, String materno) {
+        this.nombre = nombre;
+        this.paterno = paterno;
+        this.materno = materno;
+    }
+
+    public Alumno() {
+    }
+
+    public Alumno(String clave, String nombre, String paterno, String materno, Plantel plantel, String turno, String celular, String email, String password, char registrado, ArrayList<Materia> materias) {
+        this.clave = clave;
+        this.nombre = nombre;
+        this.paterno = paterno;
+        this.materno = materno;
+        this.plantel = plantel;
+        this.turno = turno;
+        this.celular = celular;
+        this.email = email;
+        this.password = password;
+        this.registrado = registrado;
+        this.materias = materias;
+    }
+
+    public Plantel getPlantel() {
+        return plantel;
+    }
+
+    public void setPlantel(Plantel plantel) {
+        this.plantel = plantel;
+    }
+
+    public String getCelular() {
+        return celular;
+    }
+
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }
+
+
 
     public String getClave() {
         return clave;
@@ -57,12 +123,12 @@ public class Alumno {
         this.materno = materno;
     }
 
-    public Sistema getSistema() {
-        return sistema;
+    public Plantel getSistema() {
+        return plantel;
     }
 
-    public void setSistema(Sistema sistema) {
-        this.sistema = sistema;
+    public void setSistema(Plantel sistema) {
+        this.plantel = sistema;
     }
 
     public String getTurno() {

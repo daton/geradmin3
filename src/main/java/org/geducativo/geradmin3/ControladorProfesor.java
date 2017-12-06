@@ -23,20 +23,24 @@ public class ControladorProfesor {
         System.out.println("si llego el profesor a registrar");
         System.out.println(json);
         ObjectMapper maper=new ObjectMapper();
+        Estatus e=new Estatus();
        Profesor profesor=maper.readValue(json, Profesor.class);
        if(profesor.getRegistrado()!='s'){
            //Aqui registrar
            profesor.setRegistrado('s');
            System.out.println("Se va a llevar a cabo el registro!!");
            //Registro, donde se actualiza el registro a 's'
-           repositorioProfesor.save(profesor);
+         //  repositorioProfesor.save(profesor);
            System.out.println("Ya esta registrado");
-
+           e.setSuccess(true);
+           e.setMensaje("registrado con exito");
        }else{
            System.out.println("NO se va a llevar a cabo el registro, ya esta registrado!!");
+           e.setSuccess(false);
+           e.setMensaje("NO se puede registra, ya esta registrado");
        }
-        Estatus e=new Estatus();
-        e.setSuccess(true);
+
+
         return e;
     }
 }
