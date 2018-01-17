@@ -9,6 +9,39 @@ public class Clave {
 
     String materia;
 
+    boolean registrado;
+
+    public Clave(Integer clave, boolean registrado) {
+        this.clave = clave;
+        this.registrado = registrado;
+    }
+
+    @Override
+    public String toString() {
+        return "Clave{" +
+                "clave=" + clave +
+                ", materia='" + materia + '\'' +
+                ", registrado=" + registrado +
+                '}';
+    }
+
+    public Clave(Integer clave, String materia, boolean registrado) {
+        this.clave = clave;
+        this.materia = materia;
+        this.registrado = registrado;
+    }
+
+    public boolean isRegistrado() {
+        return registrado;
+    }
+
+    public void setRegistrado(boolean registrado) {
+        this.registrado = registrado;
+    }
+
+    public Clave() {
+    }
+
     public Clave(Integer clave, String materia) {
         this.clave = clave;
         this.materia = materia;

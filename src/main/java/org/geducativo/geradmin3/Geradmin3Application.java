@@ -38,19 +38,20 @@ int filas=0;
 
 			System.out.println("antes de todo ");
 			LecturaCodigos lec=new LecturaCodigos();
-		//	XSSFSheet sheet=lec.leer("info3.xlsx");
+			//XSSFSheet sheet=lec.leer("info1.xlsx");
 
-		//	for(int i=0;i<=sheet.getLastRowNum();i++){
+			//for(int i=0;i<=sheet.getLastRowNum();i++){
 
-		//		for(int j=0;j<=5;j++){
+			//	for(int j=0;j<=5;j++){
 			//		Integer valor=    (int) sheet.getRow(i).getCell(j).getNumericCellValue();
                 //Del excel primero guardamos las claves de l archivo info 1 y le ponemos el nombre de la materia
-					//repositorioClave.save(new Clave(valor, "Informática 3"));
+				//	repositorioClave.save(new Clave(valor, "Informática 1",false));
 
 			//	}
-			//	filas++;
-		//	}
-
+			//filas++;
+			//}
+    Clave clave=repositorioClave.findOne(3726553);
+			System.out.println(clave);
 			System.out.println("Registro encontrados:"+repositorioClave.count());
 		}catch (Exception e){
 			System.out.println("Este error ocurrio "+e.getMessage());

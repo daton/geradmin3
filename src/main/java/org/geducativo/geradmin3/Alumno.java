@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Alumno {
 
     @Id
-    String clave;
+    Integer clave;
 
     String nombre;
     String paterno;
@@ -59,7 +59,7 @@ public class Alumno {
     public Alumno() {
     }
 
-    public Alumno(String clave, String nombre, String paterno, String materno, Plantel plantel, String turno, String celular, String email, String password, char registrado, ArrayList<Materia> materias) {
+    public Alumno(Integer clave, String nombre, String paterno, String materno, Plantel plantel, String turno, String celular, String email, String password, char registrado, ArrayList<Materia> materias) {
         this.clave = clave;
         this.nombre = nombre;
         this.paterno = paterno;
@@ -91,11 +91,11 @@ public class Alumno {
 
 
 
-    public String getClave() {
+    public Integer getClave() {
         return clave;
     }
 
-    public void setClave(String clave) {
+    public void setClave(Integer clave) {
         this.clave = clave;
     }
 

@@ -30,7 +30,7 @@ public class ControladorProfesor {
            profesor.setRegistrado('s');
            System.out.println("Se va a llevar a cabo el registro!!");
            //Registro, donde se actualiza el registro a 's'
-         //  repositorioProfesor.save(profesor);
+          repositorioProfesor.save(profesor);
            System.out.println("Ya esta registrado");
            e.setSuccess(true);
            e.setMensaje("registrado con exito");
